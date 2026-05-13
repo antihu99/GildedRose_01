@@ -3,6 +3,15 @@ Author   : 김경림
 Reviewer : 문정환,박길구,현경민,김재원 
 Viewer   : 김대경 강사, 최혁성
 
+
+## Test Enviroments
+### OS : Windows 11
+### Tech Stack : JDK 21,  Maven 3.9, Jacoco
+### IDE  : VS Code (Version: 1.119.0)
+### Test : mvn test / mvn verify / JUnit5
+
+## 목적 :  테스트 코드 작성을 통한 legacy code 이해
+
 ##  개발 요구 사항
 --------------------------------------------------------- 
     # Gilded Rose
@@ -37,6 +46,14 @@ Viewer   : 김대경 강사, 최혁성
     
     ### TexttestFixture.java  
     : non-automated golden-master test  
-    => Automated test 로 변경(ApprovalTest 이용)          //  ??????? ㅡ.ㅡa
+    => Automated test 로 변경(ApprovalTest 이용)          //  Automated ??????? ㅡ.ㅡa // ApprovalTest 일단 함.
     
     ### unit test VS golden-master test 비교
+
+
+    ### Test ID   : TC-
+
+
+
+### Test Step
+
