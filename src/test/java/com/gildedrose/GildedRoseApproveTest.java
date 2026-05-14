@@ -29,7 +29,7 @@ public class GildedRoseApproveTest {
         for (int d = 0; d <= 30; d++) {
             sb.append("--- day ").append(d).append(" ---\n");
 
-            for (Item i : gr.items)
+            for (Item i : gr.item)
                 sb.append(i.name).append(", ").append(i.sellIn).append(", ").append(i.quality).append("\n");
                 
             if (d < 30) gr.updateQuality();

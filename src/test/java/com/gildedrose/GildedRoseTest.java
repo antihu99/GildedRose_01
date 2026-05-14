@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -19,7 +20,7 @@ public class GildedRoseTest {
         // Error 발생 코드
         // assertEquals("fixme", app.items[0].name);
         
-        assertEquals("foo", app.items[0].name);
+        assertEquals("foo", app.item[0].name);
     }
 
     @Test 
@@ -45,6 +46,19 @@ public class GildedRoseTest {
         Item[] items = { new Item("Normal",0,10)};
         new GildedRose(items).updateQuality();
         assertEquals(8, items[0].quality);
+    }
+
+    @Test 
+    @DisplayName("TC-03\tNormal Item\t5\t0\t4\t0\tQuality는 0 이하 불가")
+    void normalQualityZeroTest() {
+        Item[] items = { new Item("Normal",5,0)};
+        new GildedRose(items).updateQuality();
+        // assertEquals(4, items[0].sellIn);
+        // assertEquals(0, items[0].quality);
+        assertAll(
+            () -> assertEquals(4, items[0].sellIn),
+            () -> assertEquals(0, items[0].quality)
+        ); 
     }
 
     @Test 

@@ -29,25 +29,25 @@ public class GildeRoseItemtest {
         
         app = new GildedRose(items);
         // debug console print
-        System.out.println(" app.items[0].name : " +  app.items[0].toString());
+        System.out.println(" app.items[0].name : " +  app.item[0].toString());
     }
 
     @Test
     @DisplayName("이름 반환 확인")
     void testGetName() {
-        assertEquals("+5 Dexterity Vest", app.items[0].name);
+        assertEquals("+5 Dexterity Vest", app.item[0].name);
     }
 
     @Test
     @DisplayName("Before sellIn 확인")
     void testBeforellIn() {
-        assertEquals(10, app.items[0].sellIn);
+        assertEquals(10, app.item[0].sellIn);
     }
 
     @Test
     @DisplayName("Before quality 확인")
     void testBeforequality() {
-        assertEquals(20, app.items[0].quality);
+        assertEquals(20, app.item[0].quality);
     }
 
     @Test
@@ -56,8 +56,8 @@ public class GildeRoseItemtest {
         app.updateQuality();
 
         assertAll(
-            () -> assertEquals(9, app.items[0].sellIn),
-            () -> assertEquals(19, app.items[0].quality)
+            () -> assertEquals(9, app.item[0].sellIn),
+            () -> assertEquals(19, app.item[0].quality)
         );    
     }
 
