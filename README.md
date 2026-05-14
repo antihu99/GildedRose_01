@@ -50,7 +50,7 @@ Viewer   : 김대경 강사, 최혁성
     
     ### unit test VS golden-master test 비교
     
-
+```
 ### Test CASE
 ####  일반 아이템(Test Cases)						                      
 TC ID	아이템	초기 SellIn	초기 Quality	1일 후 SellIn	1일 후 Quality	설명
@@ -91,3 +91,4 @@ TC-22	Backstage Pass 최대값 초과 방지	Quality=49, +3 조건	결과는 50
 TC-23	유통기한 경계 10일	SellIn=10	+2 적용			
 TC-24	유통기한 경계 5일	SellIn=5	+3 적용			
 TC-25	유통기한 경계 0일	SellIn=0	다음날 0			
+```
