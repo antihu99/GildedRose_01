@@ -49,11 +49,45 @@ Viewer   : 김대경 강사, 최혁성
     => Automated test 로 변경(ApprovalTest 이용)          //  Automated ??????? ㅡ.ㅡa // ApprovalTest 일단 함.
     
     ### unit test VS golden-master test 비교
+    
 
-
-    ### Test ID   : TC-
-
-
-
-### Test Step
-
+### Test CASE
+####  일반 아이템(Test Cases)						                      
+TC ID	아이템	초기 SellIn	초기 Quality	1일 후 SellIn	1일 후 Quality	설명
+TC-01	Normal Item	10	20	9	19	일반 아이템은 하루에 Quality 1 감소
+TC-02	Normal Item	0	20	-1	18	유통기한 지나면 2 감소
+TC-03	Normal Item	5	0	4	0	Quality는 0 이하 불가
+TC-04	Normal Item	-1	1	-2	0	유통기한 지난 상태에서도 0 이하 불가
+                                       
+#### Aged Brie(Test Cases)						               
+TC ID	아이템	초기 SellIn	초기 Quality	1일 후 SellIn	1일 후 Quality	설명
+TC-05	Aged Brie	10	20	9	21	하루에 1 증가
+TC-06	Aged Brie	0	20	-1	22	유통기한 지나면 2 증가
+TC-07	Aged Brie	5	50	4	50	최대값 50 유지
+TC-08	Aged Brie	-1	49	-2	50	증가하더라도 최대 50
+                                        
+#### Backstage Pass(Test Cases)						                    
+TC ID	아이템	초기 SellIn	초기 Quality	1일 후 SellIn	1일 후 Quality	설명
+TC-09	Backstage Pass	15	20	14	21	11일 이상 남으면 +1
+TC-10	Backstage Pass	10	20	9	22	10일 이하이면 +2
+TC-11	Backstage Pass	5	20	4	23	5일 이하이면 +3
+TC-12	Backstage Pass	1	20	0	23	콘서트 직전까지 증가
+TC-13	Backstage Pass	0	20	-1	0	콘서트 지나면 0
+TC-14	Backstage Pass	5	49	4	50	최대값 50 유지
+TC-15	Backstage Pass	10	49	9	50	+2 증가여도 최대 50
+TC-16	Backstage Pass	5	48	4	50	+3 증가여도 최대 50
+                                            
+#### Sulfuras(Test Cases)						                   
+TC ID	아이템	초기 SellIn	초기 Quality	1일 후 SellIn	1일 후 Quality	설명
+TC-17	Sulfuras	10	80	10	80	변화 없음
+TC-18	Sulfuras	0	80	0	80	유통기한 지나도 변화 없음
+TC-19	Sulfuras	-1	80	-1	80	항상 동일
+                                        
+#### 경계값(Boundary Value) 테스트						                   
+TC ID	설명	입력	기대 결과			
+TC-20	Quality 최소값 확인	Normal Item, Quality=0	감소하지 않음			
+TC-21	Quality 최대값 확인	Aged Brie, Quality=50	증가하지 않음			
+TC-22	Backstage Pass 최대값 초과 방지	Quality=49, +3 조건	결과는 50			
+TC-23	유통기한 경계 10일	SellIn=10	+2 적용			
+TC-24	유통기한 경계 5일	SellIn=5	+3 적용			
+TC-25	유통기한 경계 0일	SellIn=0	다음날 0			
