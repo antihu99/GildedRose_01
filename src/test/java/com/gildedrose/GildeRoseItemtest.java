@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class GildeRoseItemtest {
 
     private Item[] items;
-    private GildedRose app;
+    private GildedRose gr;
 
     // private GildeRoseItemtest(Item[] ITEMS, GildedRose APP) {
     //     this.items = ITEMS;
@@ -22,42 +22,42 @@ public class GildeRoseItemtest {
 
         items = new Item[] { new Item("+5 Dexterity Vest", 10, 20)};
         // items = new Item[] { new Item("Aged Brie", 2, 0) };
-        // items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20)};
+        // items = new Item[] { new Item("Backstage concert", 15, 20)};
         // items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", -1, 80) };
         // items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 0, 80)};
         // items = new Item[] { new Item("Elixir of the Mongoose", 5, 7)};
         
-        app = new GildedRose(items);
+        gr = new GildedRose(items);
         // debug console print
-        System.out.println(" app.items[0].name : " +  app.item[0].toString());
+        System.out.println(" app.items[0].name : " +  gr.items[0].toString());
     }
 
     @Test
     @DisplayName("이름 반환 확인")
     void testGetName() {
-        assertEquals("+5 Dexterity Vest", app.item[0].name);
+        assertEquals("+5 Dexterity Vest", gr.items[0].name);
     }
 
     @Test
     @DisplayName("Before sellIn 확인")
     void testBeforellIn() {
-        assertEquals(10, app.item[0].sellIn);
+        assertEquals(10, gr.items[0].sellIn);
     }
 
     @Test
     @DisplayName("Before quality 확인")
     void testBeforequality() {
-        assertEquals(20, app.item[0].quality);
+        assertEquals(20, gr.items[0].quality);
     }
 
     @Test
     @DisplayName("updateQuality 확인")
     void testUpdateQuality() {
-        app.updateQuality();
+        gr.updateQuality();
 
         assertAll(
-            () -> assertEquals(9, app.item[0].sellIn),
-            () -> assertEquals(19, app.item[0].quality)
+            () -> assertEquals(9, gr.items[0].sellIn),
+            () -> assertEquals(19, gr.items[0].quality)
         );    
     }
 

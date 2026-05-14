@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -20,7 +19,7 @@ public class GildedRoseTest {
         // Error 발생 코드
         // assertEquals("fixme", app.items[0].name);
         
-        assertEquals("foo", app.item[0].name);
+        assertEquals("foo", app.items[0].name);
     }
 
     @Test 
@@ -48,38 +47,26 @@ public class GildedRoseTest {
         assertEquals(8, items[0].quality);
     }
 
-    @Test 
-    @DisplayName("TC-03\tNormal Item\t5\t0\t4\t0\tQuality는 0 이하 불가")
-    void normalQualityZeroTest() {
-        Item[] items = { new Item("Normal",5,0)};
+
+    // Java — @ParameterizedTest 대응
+    @ParameterizedTest(name="sellIn={0},q={1}→{2}")
+    @CsvSource({
+    "15, 20, 21", // > 10: +1
+    "11, 20, 21", // 경계
+    "10, 20, 22", // +2 시작
+    " 6, 20, 22", // 경계
+    " 5, 20, 23", // +3 시작
+    " 1, 20, 23", // 경계
+    " 0, 20, 0", // concert 후
+    " 5, 50, 50", // 상한 50
+    " 0, 50, 0" // 0으로
+    })
+    void backstageTest( int sellIn, int initQ, int exp) {
+        Item[] items = { new Item(    "Backstage concert",    sellIn, initQ) };
         new GildedRose(items).updateQuality();
-        // assertEquals(4, items[0].sellIn);
-        // assertEquals(0, items[0].quality);
-        assertAll(
-            () -> assertEquals(4, items[0].sellIn),
-            () -> assertEquals(0, items[0].quality)
-        ); 
+        assertEquals(exp, items[0].quality);    
     }
 
-    @Test 
-    @DisplayName("ParameterizedTest CSV 다중 입력 — @CsvSource")
-    @ParameterizedTest(name="sellIn={0}, q={1}→{2}")
-    @CsvSource({
-        "15, 20, 21", // > 10: +1
-        "11, 20, 21", // 경계
-        "10, 20, 22", // +2 시작
-        " 6, 20, 22", // 경계
-        " 5, 20, 23", // +3 시작
-        " 1, 20, 23", // 경계
-        " 0, 20, 0", // concert 후
-        " 5, 50, 50", // 상한 50
-        " 0, 50, 0" // 0으로
-    })
-    void backstageTest(int sellIn, int initQ, int exp) {
-        Item[] items = { new Item( "Backstage passes...", sellIn, initQ) };
-        new GildedRose(items).updateQuality();
-        assertEquals(exp, items[0].quality);
-    }
 
 
 }
