@@ -19,6 +19,7 @@
 
 
     <dependencies>
+        <!-- Java — ApprovalTests 설정 (Maven)  -->
         <dependency>
             <groupId>com.approvaltests</groupId>
             <artifactId>approvaltests</artifactId>
