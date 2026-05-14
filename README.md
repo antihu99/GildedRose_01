@@ -50,6 +50,14 @@ Viewer   : 김대경 강사, 최혁성
     
     ### unit test VS golden-master test 비교
     
+### To Do List
+[] Legacy 테스트 문제점
+    1. 가독성 최악    :  중첩 if 5개
+    2. OCP 위반      : 새 아이템 추가시 전체 if 수정
+    3. 타입 코드 남용 : 문자열 비교로 타입 분기
+    4. 테스트 불가    : 로직이 뒤섞여 단위 테스트 불가
+
+
 ```
 ### Test CASE
 ####  일반 아이템(Test Cases)						                      
