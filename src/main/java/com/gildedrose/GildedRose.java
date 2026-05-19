@@ -20,13 +20,13 @@ class GildedRose {
 
         for (Item item : items) {
 
-            // Sulfuras
+            // 기본 sellIn 감소
+            item.sellIn--;
+
+                        // Sulfuras
             if (item.name.equals(SULFURAS)) {
                 continue;
             }
-
-            // 기본 sellIn 감소
-            item.sellIn--;
 
             // Aged Brie
             if (item.name.equals(AGED_BRIE)) {

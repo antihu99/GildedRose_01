@@ -1,6 +1,0 @@
-{
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "coverage-gutters.coverageFileNames": [
-      "target/site/jacoco/jacoco.xml"
-  ]
-}
