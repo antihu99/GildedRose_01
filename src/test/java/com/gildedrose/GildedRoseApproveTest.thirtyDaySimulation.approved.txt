@@ -1,0 +1,155 @@
+--- day 0 ---
++5 Dex Vest, 10, 20
+Aged Brie, 2, 0
+Sulfuras, 0, 80
+
+--- day 1 ---
++5 Dex Vest, 9, 19
+Aged Brie, 1, 1
+Sulfuras, -1, 78
+
+--- day 2 ---
++5 Dex Vest, 8, 18
+Aged Brie, 0, 2
+Sulfuras, -2, 76
+
+--- day 3 ---
++5 Dex Vest, 7, 17
+Aged Brie, -1, 4
+Sulfuras, -3, 74
+
+--- day 4 ---
++5 Dex Vest, 6, 16
+Aged Brie, -2, 6
+Sulfuras, -4, 72
+
+--- day 5 ---
++5 Dex Vest, 5, 15
+Aged Brie, -3, 8
+Sulfuras, -5, 70
+
+--- day 6 ---
++5 Dex Vest, 4, 14
+Aged Brie, -4, 10
+Sulfuras, -6, 68
+
+--- day 7 ---
++5 Dex Vest, 3, 13
+Aged Brie, -5, 12
+Sulfuras, -7, 66
+
+--- day 8 ---
++5 Dex Vest, 2, 12
+Aged Brie, -6, 14
+Sulfuras, -8, 64
+
+--- day 9 ---
++5 Dex Vest, 1, 11
+Aged Brie, -7, 16
+Sulfuras, -9, 62
+
+--- day 10 ---
++5 Dex Vest, 0, 10
+Aged Brie, -8, 18
+Sulfuras, -10, 60
+
+--- day 11 ---
++5 Dex Vest, -1, 8
+Aged Brie, -9, 20
+Sulfuras, -11, 58
+
+--- day 12 ---
++5 Dex Vest, -2, 6
+Aged Brie, -10, 22
+Sulfuras, -12, 56
+
+--- day 13 ---
++5 Dex Vest, -3, 4
+Aged Brie, -11, 24
+Sulfuras, -13, 54
+
+--- day 14 ---
++5 Dex Vest, -4, 2
+Aged Brie, -12, 26
+Sulfuras, -14, 52
+
+--- day 15 ---
++5 Dex Vest, -5, 0
+Aged Brie, -13, 28
+Sulfuras, -15, 50
+
+--- day 16 ---
++5 Dex Vest, -6, 0
+Aged Brie, -14, 30
+Sulfuras, -16, 48
+
+--- day 17 ---
++5 Dex Vest, -7, 0
+Aged Brie, -15, 32
+Sulfuras, -17, 46
+
+--- day 18 ---
++5 Dex Vest, -8, 0
+Aged Brie, -16, 34
+Sulfuras, -18, 44
+
+--- day 19 ---
++5 Dex Vest, -9, 0
+Aged Brie, -17, 36
+Sulfuras, -19, 42
+
+--- day 20 ---
++5 Dex Vest, -10, 0
+Aged Brie, -18, 38
+Sulfuras, -20, 40
+
+--- day 21 ---
++5 Dex Vest, -11, 0
+Aged Brie, -19, 40
+Sulfuras, -21, 38
+
+--- day 22 ---
++5 Dex Vest, -12, 0
+Aged Brie, -20, 42
+Sulfuras, -22, 36
+
+--- day 23 ---
++5 Dex Vest, -13, 0
+Aged Brie, -21, 44
+Sulfuras, -23, 34
+
+--- day 24 ---
++5 Dex Vest, -14, 0
+Aged Brie, -22, 46
+Sulfuras, -24, 32
+
+--- day 25 ---
++5 Dex Vest, -15, 0
+Aged Brie, -23, 48
+Sulfuras, -25, 30
+
+--- day 26 ---
++5 Dex Vest, -16, 0
+Aged Brie, -24, 50
+Sulfuras, -26, 28
+
+--- day 27 ---
++5 Dex Vest, -17, 0
+Aged Brie, -25, 50
+Sulfuras, -27, 26
+
+--- day 28 ---
++5 Dex Vest, -18, 0
+Aged Brie, -26, 50
+Sulfuras, -28, 24
+
+--- day 29 ---
++5 Dex Vest, -19, 0
+Aged Brie, -27, 50
+Sulfuras, -29, 22
+
+--- day 30 ---
++5 Dex Vest, -20, 0
+Aged Brie, -28, 50
+Sulfuras, -30, 20
+
